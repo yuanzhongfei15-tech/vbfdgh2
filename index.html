@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="免费短视频解析下载工具，支持抖音、快手、小红书、视频号链接解析，一键去除水印、预览视频、直接保存下载。">
+    <meta name="keywords" content="抖音下载,快手下载,小红书下载,视频号下载,无水印下载,短视频解析">
+    <meta name="author" content="Video Downloader">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="短视频无水印解析下载工具">
+    <meta property="og:description" content="支持抖音、快手、小红书、视频号，一键解析无水印下载">
+    <meta property="og:type" content="website">
+    <title>短视频无水印解析下载工具 | 抖音/快手/小红书/视频号</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">📥 视频下载器</h1>
+            <p class="subtitle">支持抖音 · 快手 · 小红书 · 视频号</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="download-card">
+                <div class="input-section">
+                    <div class="input-wrapper">
+                        <input type="text" id="videoUrl" class="url-input" placeholder="请粘贴视频链接..." autocomplete="off">
+                        <span class="platform-icon" id="platformIcon"></span>
+                    </div>
+                    <button id="parseBtn" class="parse-btn">
+                        <span class="btn-text">解析视频</span>
+                        <span class="btn-loader"></span>
+                    </button>
+                </div>
+
+                <div class="platform-btns">
+                    <button class="platform-btn active" data-platform="all">全部</button>
+                    <button class="platform-btn" data-platform="douyin">抖音</button>
+                    <button class="platform-btn" data-platform="kuaishou">快手</button>
+                    <button class="platform-btn" data-platform="xiaohongshu">小红书</button>
+                    <button class="platform-btn" data-platform="channels">视频号</button>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <div class="result-card">
+                    <div class="video-preview" id="videoPreview">
+                        <video id="videoPlayer" controls playsinline></video>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title" id="videoTitle">视频标题</h3>
+                        <p class="video-author" id="videoAuthor">作者信息</p>
+                    </div>
+                    <div class="download-actions">
+                        <button id="downloadBtn" class="download-btn primary">
+                            <span class="btn-icon">⬇️</span>
+                            <span>下载视频</span>
+                        </button>
+                        <button id="copyBtn" class="download-btn secondary">
+                            <span class="btn-icon">📋</span>
+                            <span>复制链接</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3>💡 使用说明</h3>
+                <ul>
+                    <li>复制视频链接，粘贴到输入框中</li>
+                    <li>点击"解析视频"按钮，等待解析完成</li>
+                    <li>预览视频无误后，点击下载即可保存到本地</li>
+                    <li>支持抖音、快手、小红书、视频号等主流平台</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>本工具仅供学习交流使用，请勿用于商业用途</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
